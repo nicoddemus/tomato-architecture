@@ -150,8 +150,8 @@ class CustomerService {
 
    PagedResult<Customer> getCustomers(Integer pageNo) {
       Pageable pageable = PageRequest.of(pageNo, PAGE_SIZE, Sort.of("name"));
-      Page<Customer> cusomersPage = customerRepository.findAll(pageable);
-      return convertToPagedResult(cusomersPage);
+      Page<Customer> customersPage = customerRepository.findAll(pageable);
+      return convertToPagedResult(customersPage);
    }
 }
 ```
